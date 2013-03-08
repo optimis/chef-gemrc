@@ -1,3 +1,5 @@
+name              'gemrc'
+
 maintainer        'OptimisCorp., Inc.'
 maintainer_email  'ops+cookbooks@optimiscorp.com'
 

@@ -13,8 +13,15 @@ module GemrcCookbook
     attribute(:options, option_collector: true, default: { gem: '--no-ri --no-rdoc' })
 
     def to_yaml
-      config = Gem::ConfigFile.new([])
-      options.each_pair { |k, v| config[k] = v }
+      config = {}
+      symbols = %i{sources update_sources backtrace verbose bulk_threshold}
+      options.each_pair do |k, v|
+        if symbols.include?(k.to_sym)
+          config[k.to_sym] = v
+        else
+          config[k] = v
+        end
+      end
       config.to_yaml
     end
 

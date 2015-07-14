@@ -1,4 +1,7 @@
-chef-gemrc
-==========
+gemrc-cookbook
+==============
+[Library cookbook][0] which configures Rubygems.
 
-Configures rubygems to skip RI and RDoc installation.
+This cookbook provides a resource which writes out Rubygems
+configuration files. The default recipe will write out a configuration
+file which disables documentation from installing.

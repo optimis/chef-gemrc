@@ -6,4 +6,4 @@ description 'Library cookbook to configure Rubygems.'
 long_description 'Library cookbook to configure Rubygems.'
 version '1.0.1'
 
-depends 'poise', '~> 2.0'
+depends 'poise', '~> 2.2.0'

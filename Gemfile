@@ -1,21 +1,10 @@
 source 'https://rubygems.org'
-gem 'poise', '~> 2.0'
-gem 'poise-boiler'
+gem 'poise', '~> 2.2'
+gem 'poise-boiler', '~> 1.1.6'
 
 group :lint do
   gem 'rubocop'
-end
-
-group :kitchen_common do
-  gem 'test-kitchen', '~> 1.4'
-end
-
-group :kitchen_vagrant do
-  gem 'kitchen-vagrant', '~> 0.17'
-end
-
-group :kitchen_cloud do
-  gem 'kitchen-openstack', '~> 1.8'
+  gem 'foodcritic'
 end
 
 group :unit do
@@ -29,10 +18,9 @@ end
 
 group :development do
   gem 'awesome_print'
-  gem 'guard'
-  gem 'guard-kitchen'
   gem 'guard-rspec'
   gem 'guard-rubocop'
+  gem 'guard-foodcritic'
   gem 'rake'
   gem 'stove'
 end

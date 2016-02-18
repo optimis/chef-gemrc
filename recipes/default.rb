@@ -2,6 +2,7 @@
 # Cookbook: gemrc
 # License: Apache 2.0
 #
+# Copyright 2013, OptimisCorp, Inc.
 # Copyright 2015-2016, Bloomberg Finance L.P.
 #
 arguments = ['--config-file', node['gemrc']['path']].join('=')

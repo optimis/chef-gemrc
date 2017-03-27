@@ -3,7 +3,7 @@
 # License: Apache 2.0
 #
 # Copyright 2013, OptimisCorp, Inc.
-# Copyright 2015-2016, Bloomberg Finance L.P.
+# Copyright 2015-2017, Bloomberg Finance L.P.
 #
 require 'poise'
 require 'rubygems/config_file'
@@ -39,8 +39,8 @@ module GemrcCookbook
 
         file new_resource.path do
           content new_resource.to_yaml
-          owner new_resource.owner if new_resource.owner
-          group new_resource.group if new_resource.group
+          owner new_resource.owner
+          group new_resource.group
           mode new_resource.mode
         end
       end

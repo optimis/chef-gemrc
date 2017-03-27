@@ -4,10 +4,7 @@ require_relative '../../../libraries/gemrc_file'
 describe GemrcCookbook::GemrcFile do
   step_into(:gemrc_file)
   context '#action_create' do
-    recipe do
-      gemrc_file '/root/.gemrc'
-    end
-
+    recipe { gemrc_file '/root/.gemrc' }
     it { is_expected.to create_file('/root/.gemrc') }
   end
 
